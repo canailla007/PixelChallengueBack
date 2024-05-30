@@ -29,6 +29,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorizeHttpRequests -> authorizeHttpRequests.
                         requestMatchers("/user").permitAll().
                         requestMatchers("/home").permitAll().
+                        requestMatchers("/score/**").permitAll().
                         requestMatchers("/auth/**").permitAll().
                         anyRequest().authenticated());
        return http.build();
